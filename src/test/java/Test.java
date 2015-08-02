@@ -15,6 +15,7 @@ public class Test {
     public static int hd_true = 0;
 
 
+    /* process flag field to check for hd json value */
     public void processRecord(String response) throws Exception {
 
         JSONObject json = new JSONObject(response);
@@ -62,9 +63,11 @@ public class Test {
 
                     processRecord(responsString);
                 }
-            } else {
+            }
+            /* if not 200 then dont process that record response at all */
+            else
+            {
                 System.out.print("Unable to get response" + res.statusCode());
-                break;
             }
             page++;
 
