@@ -37,11 +37,9 @@ public class Urlbuilder {
         url = url + "?" + name + "=" + value;
     }
 
-    public String addPathParamList(List<String> pathParam) {
-        for (String param : pathParam) {
-            url = url + param + "/";
-        }
-        return url;
+    public void addSinglePathParam(String name) {
+        url = url + name + "/";
     }
+
 }
 

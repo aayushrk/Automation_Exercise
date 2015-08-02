@@ -23,10 +23,9 @@ public class RestClient {
         RestAssured.useRelaxedHTTPSValidation();
     }
 
-    public String getJsonAsString(String url){
-        //returns the json object as a string
-        Response res=get(url);
-        String json=res.asString();
-        return json;
+    public Response getRequest(String url)
+    {
+        //returns response object
+        return get(url);
     }
 }
